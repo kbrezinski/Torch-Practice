@@ -9,11 +9,11 @@ from torch.utils.tensorboard import SummaryWriter
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-def create_dataset(dataset_len: int, seed: int = 2021) -> np.ndarray:
+def create_dataset(dataset_len: int = 1_000, seed: int = 2021) -> np.ndarray:
     np.random.seed(seed)
     x = np.random.rand(dataset_len, 1)
     y = 1 + 2 * x + .1 * np.random.randn(dataset_len, 1)
-    return x, y
+    return torch.from_numpy(x), torch.from_numpy(y)
 
 def init_weights(models):
     for model in models:

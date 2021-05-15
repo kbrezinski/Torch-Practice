@@ -10,3 +10,5 @@ __C.DATASET = 'fakeConfig'
 
 __C.EXP_PATH = './experiments'
 __C.EXP_NAME = 'myProject'
+
+__C.WRITE_FREQ = 10
