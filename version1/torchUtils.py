@@ -1,16 +1,15 @@
 
 import os
 import torch
-import torch.nn as nn
 
-from config import cfg
+from version1.config import cfg
 from torch.utils.data import DataLoader
-from torch.utils.tensorboard import SummaryWriter
 from utils import (logger, create_dataset, MyModel, MyDataLoader)
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-class Trainer():
+
+class Trainer:
     def __init__(self, x, y):
 
         self.train_dl = DataLoader(MyDataLoader(), batch_size=64)

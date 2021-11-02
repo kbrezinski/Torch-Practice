@@ -1,5 +1,3 @@
-
-import numpy as np
 import torch
 import torch.optim as optim
 import torch.nn as nn
@@ -8,7 +6,7 @@ import os
 from torch.utils.data import Dataset, DataLoader
 from torch.utils.data.dataset import random_split
 from utils import logger, create_dataset
-from config import cfg
+from version1.config import cfg
 
 class Model(nn.Module):
     def __init__(self):

@@ -77,7 +77,7 @@ def logger(
     writer = SummaryWriter(os.path.join(exp_path, exp_name))
     log_file = os.path.join(exp_path, exp_name + '.txt')
 
-    cfg_file = open('./config.py', 'r')
+    cfg_file = open('config.py', 'r')
     cfg_lines = cfg_file.readlines()
 
     with open(log_file, 'a') as f:
